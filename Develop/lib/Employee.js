@@ -3,10 +3,16 @@ const inquirer = require("inquirer");
 
 inquirer
     .prompt([
-        {type: "input", name: "name", message: "enter name"},
-        {type: "input", name: "id", message: "enter ID"},
-        {type: "input", name: "email", message: "enter Email"}
+        {type: "input", name: "nameInput", message: "enter name"},
+        {type: "input", name: "idInput", message: "enter ID"},
+        {type: "input", name: "emailInput", message: "enter Email"},
+        {type: "list", name: "roleInput", message: "select role", choices: [
+            "engineer",
+            "manager",
+            "intern",
+            ],
+        },
     ])
 
 
-module.exports = employee;
+module.exports = Employee;

@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 
 inquirer
     .prompt([
-        {type: "input", name: "officeNumber", message: "enter office number"}
+        {type: "input", name: "officeNumberInput", message: "enter office number"}
     ])
 
 
