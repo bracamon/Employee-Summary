@@ -23,7 +23,12 @@ const newManager = function() {
 
 
 // Intern prompt
-
+const Intern = function() { 
+    inquirer
+        .prompt([
+            {type: "input", name: "schoolInput", message: "enter School name"}
+        ]);
+};
 
 
 // Engineer prompt
