@@ -11,14 +11,22 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
-
+// Employee prompt
+const newEmployee = function() { 
+    inquirer
+        .prompt([
+            {type: "input", name: "nameInput", message: "enter employee name"},
+            {type: "input", name: "idInput", message: "enter employee ID"},
+            {type: "input", name: "emailInput", message: "enter employee email address"},
+        ])
+};
 
 // Manager prompt
 const newManager = function() { 
     inquirer
         .prompt([
             {type: "input", name: "officeNumberInput", message: "enter office number"}
-        ]);
+        ])
 };
 
 
@@ -27,7 +35,10 @@ const newIntern = function() {
     inquirer
         .prompt([
             {type: "input", name: "schoolInput", message: "enter School name"}
-        ]);
+        ])
+        .then(answers => {
+
+        })
 };
 
 
@@ -36,7 +47,7 @@ const newEngineer = function() {
     inquirer
         .prompt([
             {type: "input", name: "githubInput", message: "enter GitHub username"}
-        ]);
+        ])
 };
 
 
