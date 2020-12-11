@@ -23,7 +23,7 @@ const newManager = function() {
 
 
 // Intern prompt
-const Intern = function() { 
+const newIntern = function() { 
     inquirer
         .prompt([
             {type: "input", name: "schoolInput", message: "enter School name"}
@@ -32,7 +32,12 @@ const Intern = function() {
 
 
 // Engineer prompt
-
+const newEngineer = function() { 
+    inquirer
+        .prompt([
+            {type: "input", name: "githubInput", message: "enter GitHub username"}
+        ]);
+};
 
 
 
